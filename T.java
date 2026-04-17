@@ -1,8 +1,8 @@
 public class T {
     public static void main(String[] args) throws Exception {
-        //System.out.printf("Hello and welcome!");
-		  java.util.Map<String, String> env = System.getenv();
-		  env.forEach((k, v) -> System.out.println(k + ":" + v));
+        System.out.printf("Hello and welcome!");
+		  //java.util.Map<String, String> env = System.getenv();
+		  //env.forEach((k, v) -> System.out.println(k + ":" + v));
 		
 		  String myVar = System.getenv("MY_VAR");
 		  System.out.println(myVar);
