@@ -51,6 +51,7 @@ jobs:
     environment: test
     env:
       MY_ACTIONS_SECRET: ${{secrets.MY_ACTIONS_SECRET}}
+      MY_ENVIRONMENT_ACTIONS_SECRET: ${{secrets.MY_ENVIRONMENT_ACTIONS_SECRET}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
