@@ -1,6 +1,6 @@
 public class T {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello and welcome!");
+        System.out.println("Jay Mataji... ");
 		  //java.util.Map<String, String> env = System.getenv();
 		  //env.forEach((k, v) -> System.out.println(k + ":" + v));
 		
@@ -8,9 +8,10 @@ public class T {
 		  System.out.println("first:"+myVar);
 		String myVar1 = System.getenv("SECOND_VAR");
 		System.out.println("second:"+myVar1);
-      for (int i = 1; i <= 5; i++) {
-          System.out.println("Jay Mataji... " + i);
-      }
+
+		String myVar2 = System.getenv("MY_ACTIONS_SECRET");
+		System.out.println("This is the secrets configuted on repository level:"+myVar2);
+      	
       long start = System.currentTimeMillis();
       long end = System.currentTimeMillis();
       System.out.println("Time taken "+ (end - start));
