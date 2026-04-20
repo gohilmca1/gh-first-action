@@ -17,8 +17,10 @@ jobs:
         with:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '25'
+        id: run-java
       - run: java C.java
       - name: After C Java completes
+        if: failure() && steps.run-java.outcome == 'failure'
         run: echo "After C Java completes"
       - name: test
         run: echo "test..!!"
