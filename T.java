@@ -1,5 +1,6 @@
 public class T {
     public static void main(String[] args) throws Exception {
+		zinga
 	  long start = System.currentTimeMillis();
         System.out.println("Jay Mataji... ");
 		  //java.util.Map<String, String> env = System.getenv();
