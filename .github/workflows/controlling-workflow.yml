@@ -20,7 +20,7 @@ jobs:
         id: run-java
       - run: java C.java
       - name: After C Java completes
-        if: failure() && steps.run-java.outcome == 'failure'
+        if: failure() || steps.run-java.outcome == 'failure'
         run: echo "After C Java completes"
       - name: test
         run: echo "test..!!"
