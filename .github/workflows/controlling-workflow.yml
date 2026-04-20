@@ -21,7 +21,7 @@ jobs:
       - run: java C.java
       - name: After C Java completes
         if: failure() || steps.run-java.outcome == 'failure'
-        run: echo "After C Java completes"
+        run: echo "After C Java completes" + "${{steps.run-java.outcome}}"
       - name: test
         run: echo "${{steps.run-java.outcome}}"
   third-job:
