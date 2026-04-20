@@ -18,6 +18,10 @@ jobs:
           distribution: 'zulu' # See 'Supported distributions' for available options
           java-version: '25'
       - run: java C.java
+      - name: After C Java completes
+        run: echo "After C Java completes"
+      - name: test
+        run: echo "test..!!"
   third-job:
     needs: second-job
     runs-on: ubuntu-latest
