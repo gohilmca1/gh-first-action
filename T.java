@@ -1,5 +1,6 @@
 public class T {
     public static void main(String[] args) throws Exception {
+	  long start = System.currentTimeMillis();
         System.out.println("Jay Mataji... ");
 		  //java.util.Map<String, String> env = System.getenv();
 		  //env.forEach((k, v) -> System.out.println(k + ":" + v));
@@ -11,8 +12,11 @@ public class T {
 
 		String myVar2 = System.getenv("MY_ACTIONS_SECRET");
 		System.out.println("This is the secrets configuted on repository level:"+myVar2);
-      	
-      long start = System.currentTimeMillis();
+
+
+		String myVar3 = System.getenv("MY_ENVIRONMENT_ACTIONS_SECRET");
+		System.out.println("This is the environment speficic secrets configuted:"+myVar3);	
+
       long end = System.currentTimeMillis();
       System.out.println("Time taken "+ (end - start));
     }
