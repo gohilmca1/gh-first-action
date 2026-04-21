@@ -1,0 +1,16 @@
+name: My github actions calculator
+on: workflow_dispatch
+jobs:
+  calc:
+    uses:  ./.github/workflows/calculator-reusable-workflow.yml
+    with:
+      operand1: 5
+      operand2: 10
+  display:
+    needs: calc
+    runs-on: ubuntu-latest
+    steps:
+      - name: Addition result
+        run: echo "${{ needs.calc.outputs.sum }}"
+      - name: Addition result
+        run: echo "${{ needs.calc.outputs.multiplication }}"
