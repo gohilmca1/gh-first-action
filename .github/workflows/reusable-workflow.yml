@@ -1,0 +1,9 @@
+name: This is the workflow to be reused.
+on: workflow_call
+jobs:
+  reuable-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print reusable message
+        run: echo "Reusable message from reusable workflow....."
+  
