@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Addition result
-        run: echo "${{ needs.calc.outputs.sum }}"
+        run: echo ${{needs.calc.outputs }}
       - name: Addition result
-        run: echo "${{ needs.calc.outputs.multiplication }}"
+        run: echo ${{ needs.calc.outputs }}
