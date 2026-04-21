@@ -7,7 +7,7 @@ jobs:
       - name: Print greeting
         run: echo "Jay Mataji!!"
       - name: Print bye greeting
-        run: echo "Blale, Jay Mataji!!"
+        run: echo "Blale.. Jay Mataji!!"
   second-job:
     runs-on: ubuntu-latest
     steps:
