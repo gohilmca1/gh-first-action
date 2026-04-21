@@ -8,6 +8,8 @@ jobs:
         run: echo "Jay Mataji!!"
       - name: Print bye greeting
         run: echo "Blale, Jay Mataji!!"
+      - name: Uses existing workflow
+        uses: ./.github/workflows/reusable-workflow.yml
   second-job:
     runs-on: ubuntu-latest
     steps:
