@@ -1,6 +1,6 @@
 public class C {
     public static void main(String[] args) throws Exception {
-zinga
+//zinga
 	  long start = System.currentTimeMillis();
         System.out.println("Jay Mataji... from Java file");
 		  
