@@ -1,9 +1,16 @@
 name: This is the workflow to be reused.
-on: workflow_call
+on:
+  workflow_call:
+    inputs:
+      message-text:
+        description: The message to display
+        required: false
+        default: Ha moj ha
+        type: string
 jobs:
   reuable-job:
     runs-on: ubuntu-latest
     steps:
       - name: Print reusable message
-        run: echo "Reusable message from reusable workflow....."
+        run: echo "${{ inputs.message-text }}"
   
