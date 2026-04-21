@@ -6,6 +6,12 @@ jobs:
       matrix:
         java-versions: [10, 21, 25]
         os-versions: [ubuntu-latest, windows-latest]
+        include: # to include specific combilation
+          - java-versions: 15
+            os-versions: ubuntu-latest
+        exclude:
+          - java-versions: 10
+            os-versions: windows-latest
     runs-on: ${{ matrix.os-versions }}
     steps:
       - name: Get repo code
