@@ -1,7 +1,6 @@
 name: Reusable calculator workflow
 on:
-  #workflow_call:
-  workflow_dispatch: 
+  workflow_call:
     inputs:
       operand1:
         description: This is first operand
