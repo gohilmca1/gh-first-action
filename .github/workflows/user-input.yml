@@ -1,4 +1,4 @@
-name: Reusable calculator workflow
+name: User Input
 on:
   workflow_dispatch: 
     inputs:
