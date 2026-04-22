@@ -17,9 +17,9 @@ on:
       result:
         description: "The first output string"
         value: ${{ jobs.calculator_job.outputs.output1 }}
-      # multiplication:
-      #   description: "The second output string"
-      #   value: ${{ jobs.calculator_job.outputs.output2 }}
+      multiplication:
+        description: "The second output string"
+        value: ${{ jobs.calculator_job.outputs.output2 }}
 
 jobs:
   calculator_job:
@@ -28,13 +28,13 @@ jobs:
     # Map the job outputs to step outputs
     outputs:
       output1: ${{ steps.calc_step.outputs.result }}
-      #output2: ${{ steps.multiplication.outputs.result }}
+      output2: ${{ steps.multiplication.outputs.result }}
     steps:
       - id: calc_step
         run: |
           SUM=$(( ${{inputs.operand1}} + ${{inputs.operand2}} )) 
           echo "result=$SUM" >> $GITHUB_OUTPUT
-      # - id: multiplication
-      #   run: |
-      #     SUM=$(( ${{inputs.operand1}} * ${{inputs.operand2}} )) 
-      #     echo "result=$SUM" >> $GITHUB_OUTPUT
+      - id: multiplication
+        run: |
+          SUM=$(( ${{inputs.operand1}} * ${{inputs.operand2}} )) 
+          echo "result=$SUM" >> $GITHUB_OUTPUT
