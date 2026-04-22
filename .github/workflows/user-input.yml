@@ -1,0 +1,27 @@
+name: Reusable calculator workflow
+on:
+  workflow_dispatch: 
+    inputs:
+      operand1:
+        description: This is first operand
+        required: true
+        default: 1
+        type: number
+      operand2:
+        description: This is second operand
+        required: true
+        default: 1
+        type: number
+jobs:
+  calculator_job:
+    name: Generate output
+    runs-on: ubuntu-latest
+    steps:
+      - id: calc_step
+        run: |
+          SUM=$(( ${{inputs.operand1}} + ${{inputs.operand2}} )) 
+          echo "$SUM"
+      - id: multiplication
+        run: |
+          SUM=$(( ${{inputs.operand1}} * ${{inputs.operand2}} )) 
+          echo "$SUM"
