@@ -12,5 +12,5 @@ jobs:
     steps:
       - name: Addition result
         run: echo ${{needs.calc.outputs.result }}
-      - name: Addition result
+      - name: Multiplication result
         run: echo ${{ needs.calc.outputs.multiplication }}
