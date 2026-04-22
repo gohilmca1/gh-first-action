@@ -14,7 +14,7 @@ on:
         type: number
     # Map the workflow outputs to job outputs
     outputs:
-      sum:
+      result:
         description: "The first output string"
         value: ${{ jobs.calculator_job.outputs.output1 }}
       # multiplication:
@@ -27,10 +27,10 @@ jobs:
     runs-on: ubuntu-latest
     # Map the job outputs to step outputs
     outputs:
-      output1: ${{ steps.addition.outputs.result }}
+      output1: ${{ steps.calc_step.outputs.result }}
       #output2: ${{ steps.multiplication.outputs.result }}
     steps:
-      - id: addition
+      - id: calc_step
         run: |
           SUM=$(( ${{inputs.operand1}} + ${{inputs.operand2}} )) 
           echo "result=$SUM" >> $GITHUB_OUTPUT
