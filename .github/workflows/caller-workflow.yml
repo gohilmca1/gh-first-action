@@ -1,0 +1,18 @@
+name: Use Calculator
+on:
+  workflow_dispatch: # Allows manual trigger
+
+jobs:
+  run-calculator:
+    # Use standard syntax: {owner}/{repo}/.github/workflows/{filename}@{ref}
+    uses: ./.github/workflows/g-reusable-calc.yml
+    with:
+      num1: 10
+      num2: 25
+
+  display-result:
+    runs-on: ubuntu-latest
+    needs: run-calculator
+    steps:
+      - name: Print the output
+        run: echo "The final result is ${{ needs.run-calculator.outputs.result }}"
