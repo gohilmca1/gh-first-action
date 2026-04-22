@@ -2,7 +2,7 @@ name: My github actions calculator
 on: workflow_dispatch
 jobs:
   calc:
-    uses: ./.github/workflows/calculator-reusable-workflow.yml
+    uses: ./.github/workflows/calculator-reusable.yml
     with:
       operand1: 5
       operand2: 10
