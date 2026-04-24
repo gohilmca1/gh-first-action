@@ -1,0 +1,15 @@
+name: Workflow with Docker
+on:
+  workflow_dispatch
+env:
+  MY_VAR: Agharu che aato ..!
+jobs:
+  first-job:
+    env:
+      SECOND_VAR: Na hoy
+    runs-on: ubuntu-latest
+    container:
+      image: openjdk:25-ea-jdk
+    steps:
+      - uses: actions/checkout@v6
+      - run: java T.java
