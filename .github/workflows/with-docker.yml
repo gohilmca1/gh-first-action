@@ -12,4 +12,4 @@ jobs:
       image: openjdk:25-ea-jdk
     steps:
       - uses: actions/checkout@v6
-      - run: java T.java
+      - run: java C.java
