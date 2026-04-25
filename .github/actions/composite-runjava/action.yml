@@ -1,0 +1,10 @@
+name: 'Run Java program'
+description: 'Checks out repository, install java and run java program'
+runs:
+  using: 'composite'
+  steps:
+    - uses: actions/checkout@v6
+    - uses: actions/setup-java@v5
+      with:
+        distribution: 'zulu' # See 'Supported distributions' for available options
+        java-version: '25'
