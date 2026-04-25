@@ -11,4 +11,4 @@ jobs:
       - name: Use custom composite action
         uses: ./.github/actions/composite-runjava
       - name: run java program
-        run: java T.java
+        run: java C.java
