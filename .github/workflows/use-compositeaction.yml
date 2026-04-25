@@ -6,7 +6,7 @@ jobs:
   composite-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repo
+      - name: Checkout repo #GitHub-hosted runners do not automatically contain your code. Without actions/checkout, the runner cannot find your action.yml or Dockerfile
         uses: actions/checkout@v6
       - name: Use custom composite action
         uses: ./.github/actions/composite-runjava
