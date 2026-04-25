@@ -6,6 +6,8 @@ jobs:
   composite-job:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6
       - name: Use custom composite action
         uses: ./.github/actions/composite-runjava
       - name: run java program
