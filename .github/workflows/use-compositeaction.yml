@@ -10,5 +10,5 @@ jobs:
         uses: actions/checkout@v6
       - name: Use custom composite action
         uses: ./.github/actions/composite-runjava
-      - name: run java program
-        run: java C.java
+        with:
+          javaclass: C.java
