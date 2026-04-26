@@ -1,5 +1,10 @@
 name: 'Run Java program'
 description: 'Checks out repository, install java and run java program'
+inputs:
+  javaclass:
+    description: java file name to run
+    required: true
+    type: string
 runs:
   using: 'composite'
   steps:
@@ -8,3 +13,6 @@ runs:
       with:
         distribution: 'zulu' # See 'Supported distributions' for available options
         java-version: '25'
+    - name: Run java class
+      shell: bash
+      run: java ${{inputs.javaclass}}
